@@ -1,0 +1,73 @@
+[{
+    "name": "Google",
+    "link": "https://www.google.com/"
+  },
+  {
+    "name": "Wikipedia",
+    "link": "https://www.wikizero.com/"
+  },
+  {
+    "name": "Facebook",
+    "link": "https://www.facebook.com/"
+  },
+  {
+    "name": "LinkedIn",
+    "link": "https://www.linkedin.com"
+  },
+  {
+    "name": "Twitter",
+    "link": "http://twitter.com"
+  },
+  {
+    "name": "WhatsApp",
+    "link": "https://web.whatsapp.com/"
+  },
+  {
+    "name": "YouTube",
+    "link": "https://youtube.com"
+  },
+  {
+    "name": "HepsiBurada",
+    "link": "https://hepsiburada.com"
+  },
+  {
+    "name": "GittiGidiyor",
+    "link": "https://gittigidiyor.com"
+  },
+  {
+    "name": "N11",
+    "link": "https://n11.com"
+  },
+  {
+    "name": "PirateBay",
+    "link": "https://pirateproxy.live/"
+  },
+  {
+    "name": "Zamunda",
+    "link": "http://zamunda.net/"
+  },
+  {
+    "name": "Webrazzi",
+    "link": "https://webrazzi.com/"
+  },
+  {
+    "name": "W3Schools",
+    "link": "w3schools.com"
+  },
+  {
+    "name": "HackerRank",
+    "link": "https://www.hackerrank.com/"
+  },
+  {
+    "name": "BilimFili",
+    "link": "https://bilimfili.com"
+  },
+  {
+    "name": "Fizikist",
+    "link": "https://www.fizikist.com/"
+  },
+  {
+    "name": "Modem",
+    "link": "http://192.168.2.1/login.html"
+  }
+]
