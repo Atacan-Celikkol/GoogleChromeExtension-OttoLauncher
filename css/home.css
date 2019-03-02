@@ -357,6 +357,7 @@ hr {
 .modal-x {
     border: 1px solid #10101050;
     background: #d32e2e;
+    cursor: pointer;
 }
 
 .modal-body {
@@ -370,6 +371,7 @@ hr {
 }
 
 .modal-button {
+    cursor: pointer;
     height: 30px;
     border: 1px solid #10101050;
     background: #fff;
