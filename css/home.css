@@ -196,6 +196,7 @@ hr {
 .go-ico:hover {
     background-color: var(--secondaryColorShadow);
     box-shadow: 0px 0px 7px 0px var(--primaryColor);
+    transform: scale(1.02);
 }
 
 /* #endregion */
