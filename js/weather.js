@@ -67,7 +67,7 @@ client.get(Endpoints.nowWeather(CityCodes.Istanbul), function (response) {
         <h1 id="temperature-now">${response.sicaklik}°C</h1>
         </div>        
         <br>
-        <img style='transform: rotate(${response.ruzgarYon}deg);' src="../assets/WeatherIcons/ryon-gri.svg" alt="" height='40px'><h3>${response.ruzgarHiz}<br> Km/h</h3>
+        <img style='transform: rotate(${response.ruzgarYon}deg);' src="../assets/WeatherIcons/ryon-gri.svg" alt="" height='40px'><h3>${response.ruzgarHiz.toFixed(2)}<br> Km/h</h3>
         <div class="divider"></div>
         <h1>H</h1><h3>${response.nem}%<br></h3>
         <div class="divider"></div>
