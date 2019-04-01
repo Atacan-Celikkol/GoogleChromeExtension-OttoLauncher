@@ -14,7 +14,7 @@
             <div>
                 <form class="search-widget" autocomplete="off" action="https://www.google.com/search?" method="GET">
                     <div class="autocomplete">
-                        <input class="search" type="search" name="q" id="search-input" list="suggestions" />
+                        <input class="search" type="search" name="q" id="search-input"/>
                     </div>
                     <button class="search" id="search-btn" type="submit" />
                 </form>
@@ -42,15 +42,13 @@
 </body>
 
 <footer>
-    <div id="new-link" class="go-ico"></div>
-    <div id="gdrive" class="go-ico" data-link="https://drive.google.com"></div>
-    <div id="bookmarks" class="go-ico" data-link="chrome://bookmarks"></div>
-    <div id="extensions" class="go-ico" data-link="chrome://extensions"></div>
-    <div id="history" class="go-ico" data-link="chrome://history"></div>
-    <div id="downloads" class="go-ico" data-link="chrome://downloads"></div>
-    <div id="geek" class="go-ico" data-link="https://geek.visualstudio.com/"></div>
-
-    <div class="box-2"></div>
+    <div data-icon="Add" id="new-link"></div>
+    <div data-icon="Drive" data-link="https://drive.google.com"></div>
+    <div data-icon="Fav" data-link="chrome://bookmarks"></div>
+    <div data-icon="Extensions" data-link="chrome://extensions"></div>
+    <div data-icon="History" data-link="chrome://history"></div>
+    <div data-icon="Downloads" data-link="chrome://downloads"></div>
+    <div data-icon="VS" data-link="https://geek.visualstudio.com/"></div>
 </footer>
 
 <div id="modal" class="modal" style="display: none">
