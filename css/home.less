@@ -11,17 +11,21 @@
 @HD: ~'(max-width: 1366px)';
 @MinWidth: ~'(max-width: 850px)';
 
-@HDh: ~'(max-height: 768px)';
+@HDh: ~'(max-height: 667px)';
 
 
+@keyframes rotateY {
+   from {
+      transform: rotateY(1deg);
+   }
+
+   to {
+      transform: rotateY(359deg);
+   }
+}
 
 * {
    transition: 200ms;
-   -webkit-user-select: none;
-   -khtml-user-select: none;
-   -webkit-touch-callout: none;
-   -moz-user-select: none;
-   -o-user-select: none;
    user-select: none;
 }
 
@@ -44,7 +48,10 @@ header {
    .container-top {
       margin: auto;
       max-width: 650px;
-      width: auto;
+
+      @media @HD {
+         max-width: 550px;
+      }
 
       #search-container {
          .search-widget {
@@ -86,17 +93,25 @@ header {
 
       #weather-container {
          #weather-nextdays {
+            div {
+               .weather-icon {
+                  border: solid @primaryColor;
+                  border-radius: 100%;
+                  box-sizing: border-box;
+                  height: 57px;
+                  width: 57px;
+                  padding: 1px;
+                  animation: rotateY 2s cubic-bezier(0, 0.0, 1, 1);
+               }
+               &:hover > .weather-icon {
+                  animation: rotateY 2s cubic-bezier(0, 0.0, 1, 1) infinite;
+               }
+            }
+
             @media @HDh {
                display: none
             }
-            .weather-icon {
-               border: solid @primaryColor;
-               border-radius: 100%;
-               box-sizing: border-box;
-               height: 57px;
-               width: 57px;
-               padding: 1px;
-            }
+
          }
       }
    }
@@ -144,11 +159,11 @@ body {
       &:hover {
          background-color: @secondaryColorShadow;
          box-shadow: 0px 0px 7px 0px @primaryColor;
-         transform: scale(1.02);
+         animation: scaleUp 0.25s;
       }
 
       @media @HDh {
-         max-height: 130px;
+         max-height: 100px;
       }
 
       @media @MinWidth {
