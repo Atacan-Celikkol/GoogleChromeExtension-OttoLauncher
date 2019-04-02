@@ -23,10 +23,28 @@
       transform: rotateY(359deg);
    }
 }
+@keyframes fadeIn {
+   from {
+      opacity: 0;
+   }
+
+   to {
+      opacity: 1;
+   }
+}
+@keyframes scaleUp {
+   from {
+      transform: scale(1);
+   }
+
+   to {
+      transform: scale(1.025);
+   }
+}
 
 * {
    transition: 200ms;
-   user-select: none;
+   user-select: none;   
 }
 
 hr {
@@ -37,6 +55,7 @@ header {
    margin: auto;
    margin-top: 1%;
    text-align: center;
+   animation: fadeIn 1s;
 
    #header-text {
       color: @primaryColor;
@@ -101,7 +120,6 @@ header {
                   height: 57px;
                   width: 57px;
                   padding: 1px;
-                  animation: rotateY 2s cubic-bezier(0, 0.0, 1, 1);
                }
                &:hover > .weather-icon {
                   animation: rotateY 2s cubic-bezier(0, 0.0, 1, 1) infinite;
@@ -123,6 +141,7 @@ body {
    background-position: center;
    background-size: cover;
    margin: 0;
+   animation: fadeIn 1s;
 
    @media @MinWidth {
       background-size: auto;
@@ -159,7 +178,8 @@ body {
       &:hover {
          background-color: @secondaryColorShadow;
          box-shadow: 0px 0px 7px 0px @primaryColor;
-         animation: scaleUp 0.25s;
+         animation: scaleUp 0.25s cubic-bezier(0, 0.0, 1, 1);
+         transform: scale(1.025);
       }
 
       @media @HDh {
@@ -177,6 +197,7 @@ body {
 }
 
 footer {
+   animation: fadeIn 1s;
    position: fixed;
    text-align: right;
    bottom: 0;
