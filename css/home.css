@@ -23,7 +23,7 @@
   }
 }
 * {
-  transition: 200ms;
+  transition: 0.25s;
   user-select: none;
 }
 hr {
@@ -188,7 +188,8 @@ footer div {
 footer div:hover {
   background-color: #171717aa;
   box-shadow: 0px 0px 7px 0px #ffffff;
-  transform: scale(1.02);
+  transform: scale(1.025);
+  animation: scaleUp 0.25s cubic-bezier(0, 0, 1, 1);
 }
 /* #region Weather*/
 #weather-container {
