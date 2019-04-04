@@ -1,15 +1,27 @@
 var container = document.getElementById('container');
 
 document.addEventListener("DOMContentLoaded", async function (event) {
-    var goIcons = document.getElementsByClassName("go-ico");
+    var goIcons = document.getElementsByTagName("footer")[0].getElementsByTagName("div");
     for (var i = 0; i < goIcons.length; i++) {
         goIcons[i].addEventListener('mousedown', Go, false);
     }
     await prepareData();
     await bindModalEvents();
+    await prepareIcons();
 });
 
+async function prepareIcons() {
+    const footer = document.getElementsByTagName("footer")[0];
+    const elements = footer.getElementsByTagName("div");
 
+    for (let i = 0; i < elements.length; i++) {
+    const item = elements[i];
+    
+    item.style.backgroundImage = `url(../assets/Icons/${item.dataset.icon}.png)`;
+    
+    item.dataset.icon
+    }
+}
 
 async function prepareData() {
     var data = JSON.parse(window.localStorage.getItem("Links")) || [];
