@@ -1,3 +1,4 @@
+// COLORS
 @primaryColor: #ffffff;
 @primaryColorShadow: #ffffffaa;
 @primaryColorShadowDarker: #ffffff40;
@@ -6,45 +7,21 @@
 @secondaryColorShadowDarker: #17171740;
 @accentColor: #ef2020;
 
+// SCREEN
 @FHD: ~'(max-width: 1920px)';
 @MHD: ~'(max-width: 1540px)';
 @HD: ~'(max-width: 1366px)';
 @MinWidth: ~'(max-width: 850px)';
-
 @HDh: ~'(max-height: 667px)';
 
-
-@keyframes rotateY {
-   from {
-      transform: rotateY(1deg);
-   }
-
-   to {
-      transform: rotateY(359deg);
-   }
-}
-@keyframes fadeIn {
-   from {
-      opacity: 0;
-   }
-
-   to {
-      opacity: 1;
-   }
-}
-@keyframes scaleUp {
-   from {
-      transform: scale(1);
-   }
-
-   to {
-      transform: scale(1.025);
-   }
-}
+// ANIMATIONS
+@keyframes rotateY   {from {transform: rotateY(1deg);} to {transform: rotateY(359deg);}}
+@keyframes fadeIn    {from {opacity: 0;} to {opacity: 1;}}
+@keyframes scaleUp   {from {transform: scale(1);} to {transform: scale(1.025);}}
 
 * {
    transition: 200ms;
-   user-select: none;   
+   user-select: none;
 }
 
 hr {
@@ -121,7 +98,8 @@ header {
                   width: 57px;
                   padding: 1px;
                }
-               &:hover > .weather-icon {
+
+               &:hover>.weather-icon {
                   animation: rotateY 2s cubic-bezier(0, 0.0, 1, 1) infinite;
                }
             }
@@ -189,7 +167,7 @@ body {
       @media @MinWidth {
          height: 51.25px;
          font-size: 14pt;
-         font-family: Arial, Helvetica, sans-serif;
+         font-family: Fontastique;
          border-width: 2px;
          border-radius: 3px 3px 3px 3px;
       }
@@ -298,7 +276,7 @@ footer {
    width: 20%;
    display: inline-block;
    border: 1px solid @primaryColor;
-   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
    background: @secondaryColorShadowDarker;
 }
 

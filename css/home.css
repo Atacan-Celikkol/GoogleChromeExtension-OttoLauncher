@@ -153,7 +153,7 @@ body .go-btn:hover {
   body .go-btn {
     height: 51.25px;
     font-size: 14pt;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Fontastique;
     border-width: 2px;
     border-radius: 3px 3px 3px 3px;
   }
@@ -238,7 +238,7 @@ footer div:hover {
   width: 20%;
   display: inline-block;
   border: 1px solid #ffffff;
-  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   background: #17171740;
 }
 #weather-nextdays div:hover {
