@@ -1,5 +1,3 @@
-var container = document.getElementById('container');
-
 document.addEventListener("DOMContentLoaded", async function (event) {
     var goIcons = document.getElementsByTagName("footer")[0].getElementsByTagName("div");
     for (var i = 0; i < goIcons.length; i++) {
@@ -15,11 +13,11 @@ async function prepareIcons() {
     const elements = footer.getElementsByTagName("div");
 
     for (let i = 0; i < elements.length; i++) {
-    const item = elements[i];
-    
-    item.style.backgroundImage = `url(../assets/Icons/${item.dataset.icon}.png)`;
-    
-    item.dataset.icon
+        const item = elements[i];
+
+        item.style.backgroundImage = `url(../assets/Icons/${item.dataset.icon}.png)`;
+
+        item.dataset.icon
     }
 }
 
@@ -72,16 +70,18 @@ async function bindModalEvents() {
 //#region Modal
 async function openModal() {
     var modal = document.getElementById("modal");
-    if (modal.style.display == 'block') {
+    if (modal.style.visibility === 'visible') {
         await closeModal();
         return;
     }
-    modal.style.display = 'block';
+    modal.style.opacity = '100';
+    modal.style.visibility = 'visible';
 }
 
 async function closeModal() {
     var modal = document.getElementById("modal");
-    modal.style.display = 'none';
+    modal.style.visibility = 'hidden';
+    modal.style.opacity = '0';
 }
 
 async function saveLink() {

@@ -1,1 +1,300 @@
-@keyframes rotateY{from{transform:rotateY(1deg)}to{transform:rotateY(359deg)}}@keyframes fadeIn{from{opacity:0}to{opacity:1}}@keyframes scaleUp{from{transform:scale(1)}to{transform:scale(1.025)}}*{transition:.25s;user-select:none}hr{border:none}header{margin:auto;margin-top:1%;text-align:center;animation:fadeIn 1s}header #header-text{color:#fff;font-family:"Metal Lord";margin:0;font-size:5.75vh}header .container-top{margin:auto;max-width:650px}@media (max-width:1366px){header .container-top{max-width:550px}}header .container-top #search-container .search-widget{display:grid;grid-template-columns:auto 40px;height:40px}header .container-top #search-container .search-widget .search{width:100%;height:100%;background:#17171740;border:2px solid #fff}header .container-top #search-container .search-widget .search:focus,header .container-top #search-container .search-widget .search:hover{background:#171717aa;box-shadow:0 0 7px 0 #fff}header .container-top #search-container .search-widget .search#search-input{border-right:1px solid #fff;font-family:Consolas;font-size:17pt;color:#fff;text-shadow:0 0 6px #ffffffaa}header .container-top #search-container .search-widget .search#search-btn{border-left:1px solid #fff;background-image:url(../assets/Icons/searchw.png);background-size:cover;background-repeat:no-repeat;background-position:center;cursor:pointer}header .container-top #weather-container #weather-nextdays div .weather-icon{border:solid #fff;border-radius:100%;box-sizing:border-box;height:57px;width:57px;padding:1px}header .container-top #weather-container #weather-nextdays div:hover>.weather-icon{animation:rotateY 2s cubic-bezier(0,0,1,1) infinite}@media (max-height:667px){header .container-top #weather-container #weather-nextdays{display:none}}body{background-image:url(../assets/Backgrounds/Asari.jpeg);background-repeat:no-repeat;background-position:center;background-size:cover;margin:0;animation:fadeIn 1s}@media (max-width:850px){body{background-size:auto}}body #container{display:grid;grid-template-columns:calc(100% / 6) calc(100% / 6) calc(100% / 6) calc(100% / 6) calc(100% / 6) calc(100% / 6);grid-row-gap:10px;width:98%;margin:0 1%}@media (max-width:850px){body #container{grid-template-columns:calc(100% / 3) calc(100% / 3) calc(100% / 3);grid-row-gap:5px}}body .go-btn{width:96%;height:9vmax;max-height:140px;font-size:2vw;font-family:"Metal Lord";color:#fff;text-shadow:0 0 6px #ffffffaa;border-radius:5px 5px 20px 20px;border:3px solid #fff;background:#17171740;cursor:pointer;text-align:center;margin:auto}body .go-btn:hover{background-color:#171717aa;box-shadow:0 0 7px 0 #fff;animation:scaleUp .25s cubic-bezier(0,0,1,1);transform:scale(1.025)}@media (max-height:667px){body .go-btn{max-height:100px}}@media (max-width:850px){body .go-btn{height:51.25px;font-size:14pt;font-family:Fontastique;border-width:2px;border-radius:3px 3px 3px 3px}}footer{animation:fadeIn 1s;position:fixed;text-align:right;bottom:0;width:98%;margin:0 1%}@media (max-width:850px){footer{text-align:center}}footer div{height:45px;width:45px;display:inline-block;position:relative;border:3px solid #fff;background-color:#17171740;background-size:25px;background-repeat:no-repeat;background-position:center;border-radius:100%;margin-left:1px;cursor:pointer}footer div:hover{background-color:#171717aa;box-shadow:0 0 7px 0 #fff;transform:scale(1.025);animation:scaleUp .25s cubic-bezier(0,0,1,1)}#weather-container{width:auto;text-align:center;color:#fff}.weather-icon{border:solid #fff;border-radius:100%;box-sizing:border-box}.today-weather-top{display:grid!important;grid-template-columns:43% auto 43%}#city{text-align:right}#temperature-now{text-align:left}#weather-now-icon{margin:auto}.today-weather-top h1{letter-spacing:5px;text-decoration:overline}#today h3{margin:0!important}#weather-today{border:1px solid #fff;background:#17171740}#weather-today:hover{background:#171717aa;box-shadow:0 0 7px 0 #fff}#today *{display:inline-block;vertical-align:middle}#weather-nextdays div{width:20%;display:inline-block;border:1px solid #fff;box-sizing:border-box;background:#17171740}#weather-nextdays div:hover{background:#171717aa;box-shadow:0 0 7px 0 #fff}#weather-nextdays h4,#weather-nextdays h5{margin-top:3px;margin-bottom:3px}.modal{background:#ffffffef;color:red!important;position:absolute;top:calc(50% - 85px);left:calc(50% - 125px);width:250px;height:170px;text-align:center;z-index:0;border:1px solid #fff}.modal-header{padding:1px 0 3px 0;background:#10101030;text-align:right}.modal-header-label{margin-right:69%!important}.modal-x{border:1px solid #10101050;background:#d32e2e;cursor:pointer}.modal-body{height:100%;margin-top:6%}.modal-input{height:30px;border:1px solid #10101050}.modal-button{cursor:pointer;height:30px;border:1px solid #10101050;background:#fff}
+@keyframes rotateY {
+  from {
+    transform: rotateY(1deg);
+  }
+  to {
+    transform: rotateY(359deg);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes scaleUp {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.025);
+  }
+}
+* {
+  transition: 0.25s;
+  user-select: none;
+}
+hr {
+  border: none;
+}
+header {
+  margin: auto;
+  margin-top: 1%;
+  text-align: center;
+  animation: fadeIn 1s;
+}
+header #header-text {
+  color: #ffffff;
+  font-family: "Metal Lord";
+  margin: 0;
+  font-size: 5.75vh;
+}
+header .container-top {
+  margin: auto;
+  max-width: 650px;
+}
+@media (max-width: 1366px) {
+  header .container-top {
+    max-width: 550px;
+  }
+}
+header .container-top #search-container .search-widget {
+  display: grid;
+  grid-template-columns: auto 40px;
+  height: 40px;
+}
+header .container-top #search-container .search-widget .search {
+  width: 100%;
+  height: 100%;
+  background: #17171740;
+  border: 2px solid #ffffff;
+}
+header .container-top #search-container .search-widget .search:hover,
+header .container-top #search-container .search-widget .search:focus {
+  background: #171717aa;
+  box-shadow: 0px 0px 7px 0px #ffffff;
+}
+header .container-top #search-container .search-widget .search#search-input {
+  border-right: 1px solid #ffffff;
+  font-family: 'Consolas';
+  font-size: 17pt;
+  color: #ffffff;
+  text-shadow: 0px 0px 6px #ffffffaa;
+}
+header .container-top #search-container .search-widget .search#search-btn {
+  border-left: 1px solid #ffffff;
+  background-image: url('../assets/Icons/searchw.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+header .container-top #weather-container #weather-nextdays div .weather-icon {
+  border: solid #ffffff;
+  border-radius: 100%;
+  box-sizing: border-box;
+  height: 57px;
+  width: 57px;
+  padding: 1px;
+}
+header .container-top #weather-container #weather-nextdays div:hover > .weather-icon {
+  animation: rotateY 2s cubic-bezier(0, 0, 1, 1) infinite;
+}
+@media (max-height: 667px) {
+  header .container-top #weather-container #weather-nextdays {
+    display: none;
+  }
+}
+body {
+  background-image: url(../assets/Backgrounds/Asari.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: 0;
+  animation: fadeIn 1s;
+}
+@media (max-width: 850px) {
+  body {
+    background-size: auto;
+  }
+}
+body #container {
+  display: grid;
+  grid-template-columns: calc(100% / 6) calc(100% / 6) calc(100% / 6) calc(100% / 6) calc(100% / 6) calc(100% / 6);
+  grid-row-gap: 10px;
+  width: 98%;
+  margin: 0 1%;
+}
+@media (max-width: 850px) {
+  body #container {
+    grid-template-columns: calc(100% / 3) calc(100% / 3) calc(100% / 3);
+    grid-row-gap: 5px;
+  }
+}
+body .go-btn {
+  width: 96%;
+  height: 9vmax;
+  max-height: 140px;
+  font-size: 2vw;
+  font-family: "Metal Lord";
+  color: #ffffff;
+  text-shadow: 0px 0px 6px #ffffffaa;
+  border-radius: 5px 5px 20px 20px;
+  border: 3px solid #ffffff;
+  background: #17171740;
+  cursor: pointer;
+  text-align: center;
+  margin: auto;
+}
+body .go-btn:hover {
+  background-color: #171717aa;
+  box-shadow: 0px 0px 7px 0px #ffffff;
+  animation: scaleUp 0.25s cubic-bezier(0, 0, 1, 1);
+  transform: scale(1.025);
+}
+@media (max-height: 667px) {
+  body .go-btn {
+    max-height: 100px;
+  }
+}
+@media (max-width: 850px) {
+  body .go-btn {
+    height: 51.25px;
+    font-size: 14pt;
+    font-family: Fontastique;
+    border-width: 2px;
+    border-radius: 3px 3px 3px 3px;
+  }
+}
+footer {
+  animation: fadeIn 1s;
+  position: fixed;
+  text-align: right;
+  bottom: 0;
+  width: 98%;
+  margin: 0 1%;
+}
+@media (max-width: 850px) {
+  footer {
+    text-align: center;
+  }
+}
+footer div {
+  height: 45px;
+  width: 45px;
+  display: inline-block;
+  position: relative;
+  border: 3px solid #ffffff;
+  background-color: #17171740;
+  background-size: 25px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 100%;
+  margin-left: 1px;
+  cursor: pointer;
+}
+footer div:hover {
+  background-color: #171717aa;
+  box-shadow: 0px 0px 7px 0px #ffffff;
+  transform: scale(1.025);
+  animation: scaleUp 0.25s cubic-bezier(0, 0, 1, 1);
+}
+/* #region Weather*/
+#weather-container {
+  width: auto;
+  text-align: center;
+  color: #ffffff;
+}
+.weather-icon {
+  border: solid #ffffff;
+  border-radius: 100%;
+  box-sizing: border-box;
+}
+.today-weather-top {
+  display: grid !important;
+  grid-template-columns: 43% auto 43%;
+}
+#city {
+  text-align: right;
+}
+#temperature-now {
+  text-align: left;
+}
+#weather-now-icon {
+  margin: auto;
+}
+.today-weather-top h1 {
+  letter-spacing: 5px;
+  text-decoration: overline;
+}
+#today h3 {
+  margin: 0 !important;
+}
+#weather-today {
+  border: 1px solid #ffffff;
+  /* border-top: 0; */
+  background: #17171740;
+}
+#weather-today:hover {
+  background: #171717aa;
+  box-shadow: 0px 0px 7px 0px #ffffff;
+}
+#today * {
+  display: inline-block;
+  vertical-align: middle;
+}
+#weather-nextdays div {
+  width: 20%;
+  display: inline-block;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  background: #17171740;
+}
+#weather-nextdays div:hover {
+  background: #171717aa;
+  box-shadow: 0px 0px 7px 0px #ffffff;
+}
+#weather-nextdays h5,
+#weather-nextdays h4 {
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+/* #endregion */
+/* #region MODAL*/
+.modal {
+  background: #ffffffef;
+  color: red !important;
+  position: absolute;
+  top: calc(50% - 85px);
+  left: calc(50% - 125px);
+  width: 250px;
+  height: 170px;
+  visibility: hidden;
+  opacity: 0;
+  text-align: center;
+  z-index: 0;
+  border: 1px solid #ffffff;
+}
+.modal input {
+  padding: 5px;
+}
+.modal-header {
+  padding: 1px 0px 3px 0;
+  background: #10101030;
+  text-align: right;
+}
+.modal-header-label {
+  margin-right: 69% !important;
+}
+.modal-x {
+  border: 1px solid #10101050;
+  background: #d32e2e;
+  cursor: pointer;
+}
+.modal-body {
+  height: 100%;
+  margin-top: 6%;
+}
+.modal-input {
+  height: 30px;
+  border: 1px solid #10101050;
+}
+.modal-button {
+  cursor: pointer;
+  height: 30px;
+  border: 1px solid #10101050;
+  background: #fff;
+}
+/* #endregion */
