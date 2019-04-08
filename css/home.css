@@ -29,6 +29,11 @@
 hr {
   border: none;
 }
+.scaleUp-animation button:hover,
+.scaleUp-animation div:hover {
+  animation: scaleUp 0.25s cubic-bezier(0, 0, 1, 1);
+  transform: scale(1.025);
+}
 header {
   margin: auto;
   margin-top: 1%;
@@ -141,8 +146,6 @@ body .go-btn {
 body .go-btn:hover {
   background-color: #171717aa;
   box-shadow: 0px 0px 7px 0px #ffffff;
-  animation: scaleUp 0.25s cubic-bezier(0, 0, 1, 1);
-  transform: scale(1.025);
 }
 @media (max-height: 667px) {
   body .go-btn {
@@ -172,24 +175,29 @@ footer {
   }
 }
 footer div {
-  height: 45px;
-  width: 45px;
   display: inline-block;
   position: relative;
   border: 3px solid #ffffff;
   background-color: #17171740;
-  background-size: 25px;
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 100%;
   margin-left: 1px;
   cursor: pointer;
+  height: 45px;
+  width: 45px;
+  background-size: 25px;
+}
+@media (max-width: 850px) {
+  footer div {
+    height: 40px;
+    width: 40px;
+    background-size: 23px;
+  }
 }
 footer div:hover {
   background-color: #171717aa;
   box-shadow: 0px 0px 7px 0px #ffffff;
-  transform: scale(1.025);
-  animation: scaleUp 0.25s cubic-bezier(0, 0, 1, 1);
 }
 /* #region Weather*/
 #weather-container {

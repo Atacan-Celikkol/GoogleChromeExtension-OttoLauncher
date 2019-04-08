@@ -28,6 +28,13 @@ hr {
    border: none
 }
 
+.scaleUp-animation {
+   button:hover, div:hover {
+      animation: scaleUp 0.25s cubic-bezier(0, 0.0, 1, 1);
+      transform: scale(1.025);
+   }
+}
+
 header {
    margin: auto;
    margin-top: 1%;
@@ -156,8 +163,6 @@ body {
       &:hover {
          background-color: @secondaryColorShadow;
          box-shadow: 0px 0px 7px 0px @primaryColor;
-         animation: scaleUp 0.25s cubic-bezier(0, 0.0, 1, 1);
-         transform: scale(1.025);
       }
 
       @media @HDh {
@@ -187,24 +192,28 @@ footer {
    }
 
    div {
-      height: 45px;
-      width: 45px;
       display: inline-block;
       position: relative;
       border: 3px solid @primaryColor;
       background-color: @secondaryColorShadowDarker;
-      background-size: 25px;
       background-repeat: no-repeat;
       background-position: center;
       border-radius: 100%;
       margin-left: 1px;
       cursor: pointer;
+      height: 45px;
+      width: 45px;
+      background-size: 25px;
+
+      @media @MinWidth {
+         height: 40px;
+         width: 40px;
+         background-size: 23px;
+      }
 
       &:hover {
          background-color: @secondaryColorShadow;
          box-shadow: 0px 0px 7px 0px @primaryColor;
-         transform: scale(1.025);
-         animation: scaleUp 0.25s cubic-bezier(0, 0.0, 1, 1);
       }
    }
 }
