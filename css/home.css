@@ -64,7 +64,7 @@ header .container-top #search-container .search-widget .search {
   width: 100%;
   height: 100%;
   background: #17171740;
-  border: 2px solid #ffffff;
+  border: 1px solid #ffffff;
 }
 header .container-top #search-container .search-widget .search:hover,
 header .container-top #search-container .search-widget .search:focus {
@@ -72,14 +72,14 @@ header .container-top #search-container .search-widget .search:focus {
   box-shadow: 0px 0px 7px 0px #ffffff;
 }
 header .container-top #search-container .search-widget .search#search-input {
-  border-right: 1px solid #ffffff;
+  border-right: 0.5px solid #ffffff;
   font-family: 'Consolas';
   font-size: 17pt;
   color: #ffffff;
   text-shadow: 0px 0px 6px #ffffffaa;
 }
 header .container-top #search-container .search-widget .search#search-btn {
-  border-left: 1px solid #ffffff;
+  border-left: 0.5px solid #ffffff;
   background-image: url('../assets/Icons/searchw.png');
   background-size: cover;
   background-repeat: no-repeat;
@@ -184,14 +184,16 @@ footer div {
   border-radius: 100%;
   margin-left: 1px;
   cursor: pointer;
-  height: 45px;
-  width: 45px;
+  max-height: 50px;
+  max-width: 50px;
+  min-height: 40px;
+  min-width: 40px;
+  width: 5vh;
+  height: 5vh;
   background-size: 25px;
 }
 @media (max-width: 850px) {
   footer div {
-    height: 40px;
-    width: 40px;
     background-size: 23px;
   }
 }
@@ -205,62 +207,65 @@ footer div:hover {
   text-align: center;
   color: #ffffff;
 }
-.weather-icon {
+#weather-container .weather-icon {
   border: solid #ffffff;
   border-radius: 100%;
   box-sizing: border-box;
 }
-.today-weather-top {
-  display: grid !important;
-  grid-template-columns: 43% auto 43%;
-}
-#city {
-  text-align: right;
-}
-#temperature-now {
-  text-align: left;
-}
-#weather-now-icon {
-  margin: auto;
-}
-.today-weather-top h1 {
-  letter-spacing: 5px;
-  text-decoration: overline;
-}
-#today h3 {
-  margin: 0 !important;
-}
-#weather-today {
+#weather-container #weather-today {
   border: 1px solid #ffffff;
-  /* border-top: 0; */
+  border-bottom: 0;
   background: #17171740;
 }
-#weather-today:hover {
+@media (max-height: 667px) {
+  #weather-container #weather-today {
+    border-bottom: 1px solid;
+  }
+}
+#weather-container #weather-today:hover {
   background: #171717aa;
   box-shadow: 0px 0px 7px 0px #ffffff;
 }
-#today * {
+#weather-container #weather-today #today * {
   display: inline-block;
   vertical-align: middle;
 }
-#weather-nextdays div {
+#weather-container #weather-today #today h3 {
+  margin: 0 !important;
+}
+#weather-container #weather-today #today .today-weather-top {
+  display: grid !important;
+  grid-template-columns: 43% auto 43%;
+}
+#weather-container #weather-today #today .today-weather-top #city {
+  text-align: right;
+}
+#weather-container #weather-today #today .today-weather-top #temperature-now {
+  text-align: left;
+}
+#weather-container #weather-today #today .today-weather-top #weather-now-icon {
+  margin: auto;
+}
+#weather-container #weather-today #today .today-weather-top h1 {
+  letter-spacing: 5px;
+  text-decoration: overline;
+}
+#weather-container #weather-nextdays div {
   width: 20%;
   display: inline-block;
   border: 1px solid #ffffff;
   box-sizing: border-box;
   background: #17171740;
 }
-#weather-nextdays div:hover {
+#weather-container #weather-nextdays div:hover {
   background: #171717aa;
   box-shadow: 0px 0px 7px 0px #ffffff;
 }
-#weather-nextdays h5,
-#weather-nextdays h4 {
+#weather-container #weather-nextdays h5,
+#weather-container #weather-nextdays h4 {
   margin-top: 3px;
   margin-bottom: 3px;
 }
-/* #endregion */
-/* #region MODAL*/
 .modal {
   background: #ffffffef;
   color: red !important;
@@ -275,34 +280,40 @@ footer div:hover {
   z-index: 0;
   border: 1px solid #ffffff;
 }
-.modal input {
-  padding: 5px;
+.modal .modal-titlebar {
+  background: #17171740;
+  height: 27px;
+  align-items: center;
+  display: flex;
 }
-.modal-header {
-  padding: 1px 0px 3px 0;
-  background: #10101030;
-  text-align: right;
+.modal .modal-titlebar label {
+  font-family: Fontastique;
+  font-size: 10pt;
+  margin-left: 5px;
 }
-.modal-header-label {
-  margin-right: 69% !important;
-}
-.modal-x {
-  border: 1px solid #10101050;
-  background: #d32e2e;
+.modal .modal-titlebar button {
+  border: 1px solid #17171740;
+  background: #ef2020;
   cursor: pointer;
+  position: absolute;
+  right: 1px;
+  height: 27px;
+  width: 27px;
 }
-.modal-body {
+.modal .modal-body {
   height: 100%;
   margin-top: 6%;
 }
-.modal-input {
-  height: 30px;
-  border: 1px solid #10101050;
-}
-.modal-button {
+.modal .modal-body button {
   cursor: pointer;
   height: 30px;
   border: 1px solid #10101050;
   background: #fff;
 }
-/* #endregion */
+.modal .modal-body input {
+  padding: 5px;
+  height: 30px;
+  border: 1px solid #10101050;
+  font-family: Fontastique;
+  width: 85%;
+}
